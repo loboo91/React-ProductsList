@@ -8,7 +8,7 @@
 	}
 
 	@else if $class == md {
-		@media (min-width: 992px) { @content; }
+		@media (min-width: 1000px) { @content; }
 	}
 
 	@else if $class == lg {
@@ -17,5 +17,20 @@
 
 	@else {
 		@warn "respond-to mixin supports: xs, sm, md, lg";
+	}
+}
+
+@mixin linx($link, $visit, $hover, $active) {
+	a {
+		color: $link;
+		&:visited {
+			color: $visit;
+		}
+		&:hover {
+			color: $hover;
+		}
+		&:active {
+			color: $active;
+		}
 	}
 }

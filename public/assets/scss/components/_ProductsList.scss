@@ -1,0 +1,115 @@
+.products-list-container{
+  float: right;
+  width: calc(100% - 225px - 36px);
+  padding-left: 36px;
+}
+.products-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.product-container{
+  width: 220px;
+  height: 286px;
+  margin: 0 15px 15px 0;
+  align-items: center;
+  &:hover{
+    box-shadow: inset 0 0 0 2px $border-color-2;
+    border-radius:2px;
+    .product-image-container{
+      transform: scale(1.09);
+      transition-property: transform;
+      transition-duration: 900ms;
+    }
+  }
+}
+
+.product-image-container{
+  display: table-cell;
+  width: 220px;
+  height:189px;
+  padding: 18px 18px 0 18px;
+  vertical-align: middle;
+  text-align: center;
+  transition: all 900ms;
+  transform: scale(1);
+  img {
+    max-width: 180px;
+    max-height: 160px;
+    margin: 0 auto;
+    vertical-align: middle;
+  }
+}
+
+.product-description-container {
+  margin: 0;
+  padding: 0 16px 19px 16px;
+}
+.product-rating{
+  float: left;
+  width: 70%;
+  margin: 0;
+  padding-bottom: 3px;
+  letter-spacing: -1px;
+  text-align:left;
+  span{
+    font-size: 20px;
+    color:$stars-color-active;
+  }
+  .grey-star{
+    font-size: 20px;
+    color:$stars-color;
+  }
+}
+
+.product-like {
+  width:auto;
+  margin: 1px 1px 0 0;
+  text-align: right;
+  span {
+    color: $fav-color-active;
+  }
+}
+.product-unlike{
+  width:auto;
+  margin: 1px 1px 0 0;
+  text-align: right;
+  span {
+    color: $fav-color;
+  }
+}
+
+.product-name{
+  margin: 0px;
+  padding: 0 0 1px 3px;
+  font-family: $font-content;
+  font-size: $font-high;
+  color: $primary-color-2;
+  font-weight: bold;
+}
+.product-size{
+  margin: 0px;
+  padding-left: 3px;
+  font-family: $font-content;
+  font-size: $font-small;
+  color: $primary-color-2;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:500ms;
+  -moz-animation-duration:500ms;
+  animation-duration:500ms;
+}

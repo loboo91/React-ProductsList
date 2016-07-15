@@ -1,0 +1,133 @@
+.top-user-nav{
+  width: auto;
+  height: auto;
+  ul {
+    display: block;
+    float: right;
+    font-family: $font-menu;
+    font-size: $font-small;
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+    li{
+      display: block;
+      float: left;
+      padding: 0 13px 0 13px;
+      border-left : 1px solid $border-color-1;
+      a {
+        display: block;
+        height: 18px;
+        padding: 2px 0 2px 0;
+        color: $primary-color-2;
+        &:hover{
+          color: $primary-color-1;
+        }
+      }
+    }
+  }
+}
+
+.user-account{
+  a:before {
+    @extend .user-icon;
+  }
+  @include linx($primary-color-1, $primary-color-1, $primary-color-1, $primary-color-1);
+}
+
+.user-cart{
+  a{
+    &:after{
+      @extend .arrow-icon;
+    }
+    &:before{
+      @extend .cart-icon;
+    }
+  }
+  border-right : 1px solid $border-color-1;
+  @include linx($primary-color-1, $primary-color-1, $primary-color-1, $primary-color-1);
+}
+
+.user-lang{
+  a:after{
+    @extend .arrow-icon;
+  }
+}
+
+.user-search{
+  a:after{
+    @extend .search-icon;
+  }
+}
+
+.top-nav{
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  text-align: center;
+
+  @include respond-to('xs'){
+    width: 100%;
+  }
+  @include respond-to('sm'){
+    width: 720px;
+  }
+  @include respond-to('md'){
+    width: 940px;
+  }
+  @include respond-to('lg'){
+    width: 1170px;
+  }
+
+  ul {
+    display: inline-block;
+    width: auto;
+    height: 40px;
+    font-family: $font-menu;
+    font-size:$font-medium;
+
+    @include respond-to('xs'){
+      width: 100%;
+    }
+
+    li {
+      float: left;
+      padding: 0 21px 0 21px;
+      text-align: left;
+      text-transform: uppercase;
+      list-style: none;
+
+      a {
+        padding-top: 10px;
+        display: block;
+        height: calc(40px - 10px);
+        transition-property: color;
+        transition-duration: 500ms;
+      }
+
+      @include respond-to('xs'){
+        float: none;
+        text-align: center;
+        border-top: 1px solid $border-color-1;
+        padding: 10px;
+      }
+      @include respond-to('sm'){
+        padding: 0 11px 0 11px;
+      }
+      @include respond-to('md'){
+        padding: 0 11px 0 11px;
+      }
+      @include respond-to('lg'){
+        padding: 0 21px 0 21px;
+      }
+      @include linx($primary-color-2, $primary-color-2, $primary-color-1, $primary-color-1);
+    }
+    .active{
+      font-weight: bold;
+      @include linx($primary-color-1, $primary-color-1, $primary-color-1, $primary-color-1);
+    }
+  }
+  @include respond-to('xs'){
+    height: 100%;
+  }
+}
+

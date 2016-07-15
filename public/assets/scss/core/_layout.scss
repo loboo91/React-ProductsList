@@ -1,0 +1,85 @@
+.page{
+  height: auto;
+  width: 100%;
+}
+
+.logo-bar{
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+
+  @include respond-to('xs'){
+    width: 100%;
+  }
+  @include respond-to('sm'){
+    width: 720px;
+  }
+  @include respond-to('md'){
+    width: 940px;
+  }
+  @include respond-to('lg'){
+    width: 1170px;
+  }
+}
+
+.header-logo {
+  width: 20%;
+  height: 60px;
+  float: left;
+  h1 {
+    margin: 0;
+    padding-top: 13px;
+  }
+  @include respond-to('xs') {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.top-bar {
+  width: 80%;
+  height: auto;
+  float: left;
+
+  @include respond-to('xs'){
+    width: 100%;
+  }
+}
+
+.nav-bar{
+  height: 38px;
+  margin: 0 auto;
+  width: 100%;
+  border-bottom: 1px solid $border-color-1;
+  border-top: 1px solid $border-color-1;
+}
+
+.columns-container{
+  width:100%;
+  height:auto;
+}
+
+.container{
+  height: auto;
+  margin: 0 auto;
+  padding-top: 40px;
+  @include respond-to('xs'){
+    width: 100%;
+  }
+  @include respond-to('sm'){
+    width: 720px;
+  }
+  @include respond-to('md'){
+    width: 940px;
+  }
+  @include respond-to('lg'){
+    width: 1170px;
+  }
+}
+
+.filter-container{
+  float: left;
+  width: 225px;
+}
+
+
