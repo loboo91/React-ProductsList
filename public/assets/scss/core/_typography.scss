@@ -272,8 +272,6 @@
   @extend .genericon-rotate-90;
   font-size: 13px;
   content: "\f104";
-  margin-left: 2px;
-
 }
 
 .search-icon{
@@ -281,27 +279,30 @@
   font-size: 20px;
   font-weight: bold;
   content: "\f400";
+  margin-top: -3px;
 }
 
 .cart-icon {
   @extend .icon;
   @extend .genericon-flip-horizontal;
-  font-size: 24px;
-  line-height: 16px;
+  font-size: 20px;
+  margin-top: -3px;
   content: "\f447";
+  font-weight: bold;
 }
 
 .user-icon {
   @extend .icon;
   @extend .genericon-flip-horizontal;
-  font-size: 24px;
-  line-height: 16px;
+  font-size: 20px;
+  margin-top: -3px;
   content: "\f304";
+  font-weight: bold;
 }
 
 $font-menu: Montserrat, sans-serif;
 $font-content: 'PT Sans', sans-serif;
 
-$font-high: 18px;
+$font-large: 18px;
 $font-medium: 16px;
-$font-small: 13px;
+$font-small: 14px;

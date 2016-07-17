@@ -1,0 +1,61 @@
+.filter-option{
+  display: block;
+  width:200px;
+  font-family: $font-content;
+  font-size: $font-small;
+  color: $color-font-filter-item;
+  line-height: 22px;
+  cursor: pointer;
+}
+.filter-option-checkbox{
+  float: left;
+  width: 160px;
+}
+
+.filter-checkbox-label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  display:none;
+}
+.filter-checkbox-label:before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-top:5px;
+  margin-right: 10px;
+  vertical-align:top;
+  background-color: white;
+  box-shadow: inset 0 0 0 1px #c9c9c9;
+  text-align: center;
+  border-radius: 2px;
+  transition-property: background-color, box-shadow;
+  transition-duration: 400ms;
+}
+input[type=checkbox]:checked + .filter-checkbox-label:before {
+  color: white;
+  background-color: $primary-color-1;
+  font-size: 11px;  line-height:9px;
+  box-shadow: none;
+  font-family: Genericons;
+  content: "\2713";
+  transition-property: background-color, box-shadow;
+  transition-duration: 400ms;
+}
+
+
+.filter-option-count{
+  float: right;
+  text-align: right;
+  width: 40px;
+  margin-right: -1px;
+}
+
+.filter-option-name{
+  float: left;
+  text-align: left;
+  width: 200px;
+}
