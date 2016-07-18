@@ -1,72 +1,45 @@
-.filter-rating-option {
-  display: block;
-  width:200px;
-  font-family: $font-content;
-  font-size: $font-small;
-  color: $color-font-filter-item;
-  line-height: 22px;
-  cursor: pointer;
-}
-
-.filter-rating-label{
-  font-family: $font-content;
-  font-size: $font-small;
-  color: $color-font-filter-item;
-  cursor: pointer;
-}
-
-.filter-rating-item{
+.filter-color-option{
   display: inline-block;
-  width:150px;
+  width:40px;
+  height: 40px;
   float: left;
-}
-.filter-rating-item label{
+  label{
     position:relative;
     overflow:hidden;
     cursor:pointer;
-    margin-right:12px;
-  }
 
-.filter-rating-item label input[type="radio"]{
+  }
+  label input[type="radio"]{
     position: absolute;
     left:-9001px;
   }
-
-.filter-rating-item .circ{
-    width:10px;
-    height:10px;
-    border-radius: 12px;
+  .square{
+    width:40px;
+    height:40px;
     display:inline-block;
-    border:1px solid $color-font-filter-header;
     top:1px;
     position:relative;
-    margin-right:10px;
-  }
 
-.filter-rating-item .circ .dot{
-    width: 6px;
-    height: 6px;
-    display: block;
-    position: absolute;
-    border-radius: 2em;
-    left: 2px;
-    top: 2px;
+    span{
+      display: block;
+      position: absolute;
+      left: 5px;
+      top: 5px;
+    }
+
 
   }
-
-.filter-rating-item label input[type="radio"]:checked ~ .circ .dot{
-    background-color:$border-color-2;
-  }
-
-.filter-rating-item label input[type="radio"]:checked ~ .circ{
-  border: 1px solid $primary-color-1;
 }
 
-.gold-star{
-  font-size: 20px;
-  color:$stars-color-active;
-}
-.grey-star{
-  font-size: 20px;
-  color:$stars-color;
+
+.filter-color-option label input[type="radio"]:checked ~ .square{
+  box-shadow: inset 0 0 0 4px white;
+  span:before {
+    font-family: Genericons;
+    content: '\f418';
+    font-size: 28px;
+    color: white;
+    top:6px;
+    left:6px;
+  }
 }

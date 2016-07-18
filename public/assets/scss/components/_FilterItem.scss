@@ -5,7 +5,6 @@
   font-size: $font-small;
   color: $color-font-filter-item;
   line-height: 22px;
-  cursor: pointer;
 }
 .filter-option-checkbox{
   float: left;
@@ -15,26 +14,27 @@
 .filter-checkbox-label {
   display: inline-block;
   cursor: pointer;
+  &:before{
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-top:5px;
+    margin-right: 10px;
+    vertical-align:top;
+    background-color: white;
+    box-shadow: inset 0 0 0 1px #c9c9c9;
+    text-align: center;
+    border-radius: 2px;
+    transition-property: background-color, box-shadow;
+    transition-duration: 400ms;
+  }
 }
 
 input[type=checkbox] {
   display:none;
 }
-.filter-checkbox-label:before {
-  content: "";
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin-top:5px;
-  margin-right: 10px;
-  vertical-align:top;
-  background-color: white;
-  box-shadow: inset 0 0 0 1px #c9c9c9;
-  text-align: center;
-  border-radius: 2px;
-  transition-property: background-color, box-shadow;
-  transition-duration: 400ms;
-}
+
 input[type=checkbox]:checked + .filter-checkbox-label:before {
   color: white;
   background-color: $primary-color-1;
@@ -50,7 +50,7 @@ input[type=checkbox]:checked + .filter-checkbox-label:before {
 .filter-option-count{
   float: right;
   text-align: right;
-  width: 40px;
+  width: auto;
   margin-right: -1px;
 }
 
@@ -58,4 +58,70 @@ input[type=checkbox]:checked + .filter-checkbox-label:before {
   float: left;
   text-align: left;
   width: 200px;
+}
+
+.orientation{
+  width:50%;
+  .filter-checkbox-label {
+    margin-top: 20px;
+    margin-left: 14px;
+    line-height:50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-item: center;
+
+    &:before{
+      margin: 0px;
+      width: 45px;
+      height: 30px;
+      background-color: $item-color;
+      box-shadow: inset 0 0 0 1px #c9c9c9;
+      text-align: center;
+      border-radius: 2px;
+      transition-property: background-color, box-shadow;
+      transition-duration: 400ms;
+
+    }
+  }
+
+  input[type=checkbox] {
+    display:none;
+  }
+
+  input[type=checkbox]:checked + .filter-checkbox-label:before {
+    color: white;
+    background-color: $primary-color-1;
+    font-size: 28px;
+    line-height:30px;
+    box-shadow: none;
+    font-family: Genericons;
+    content: '\f418';
+    transition-property: background-color, box-shadow;
+    transition-duration: 400ms;
+  }
+}
+
+
+.vertical {
+  .filter-checkbox-label{
+    margin: 10px 0 0 0;
+    line-height:40px;
+    &:before{
+      width: 35px;
+      height: 45px;
+    }
+  }
+  input[type=checkbox]:checked + .filter-checkbox-label:before {
+    line-height:48px;
+  }
 }

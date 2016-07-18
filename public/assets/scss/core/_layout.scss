@@ -63,7 +63,7 @@
   height:auto;
 }
 
-.container{
+.product-list-container{
   height: auto;
   margin: 0 auto;
   padding-top: 40px;
@@ -85,8 +85,113 @@
 .filters-container{
   float: left;
   width: 225px;
-  height:100%;
-  border-right : 1px solid $border-color-1;
+  height: 100%;
+
 }
 
+.footer-container{
+  width: 100%;
+  margin: 0 auto;
+  clear:both;
+  padding-top:100px;
+  z-index: 1;
+}
+
+.social-block-conatiner{
+  width: 100%;
+  border-bottom: 1px solid $border-color-1;
+  border-top: 1px solid $border-color-1;
+  height: 88px;
+  margin: 0 auto;
+
+}
+
+.social-block{
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  img {
+    float:left;
+    margin-left: 17px;
+    margin-top: 27px;
+  }
+  .footer-label{
+    float:left;
+    margin: 23px 0 0 140px;
+    font-family: $font-content;
+    font-size: $font-large;
+    color: $color-font-filter-item;
+    small {
+      font-family: $font-content;
+      font-size: $font-small;
+      color: $color-font-filter-header;
+      line-height:33px;
+    }
+  }
+  .footer-social-icon{
+    float: right;
+    color: $color-social-icon;
+    margin: 35px 0 34px 0;
+    span {
+      margin-right: 13px;
+      margin-left: 5px;
+      font-size: 23px;
+    }
+  }
+}
+
+.footer-block-category{
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+
+  height: 290px;
+  width: 1200px;
+  .footer-category {
+    margin-top: 33px;
+    margin-left: 17px;
+    min-width: 185px;
+    min-height: 250px;
+    margin-right: 34px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+  }
+}
+
+.footer-category-label{
+  margin-top: 24px;
+  font-family: $font-content;
+  font-size: $font-large;
+  color: $color-font-filter-item;
+}
+.footer-section-item{
+  font-family: $font-content;
+  font-size: $font-small;
+  color: $color-font-filter-header;
+  margin-top:10px;
+}
+
+.copyright{
+  width:100%;
+   border-top: 1px solid $border-color-1;
+  .copyright-box{
+    height:29px;
+    width: 1200px;
+    clear: both;
+    margin: 0 auto;
+    padding-top:12px;
+    text-align:center;
+    font-family: $font-content;
+    font-size: $font-small;
+    color: $color-font-filter-header;
+}
+}
+.address {
+  padding-right:45px;
+  padding-top:7px;
+}
 

@@ -28,13 +28,15 @@
 }
 
 .user-account{
+  @include linx($primary-color-1, $primary-color-1, $primary-color-1, $primary-color-1);
   a:before {
     @extend .user-icon;
   }
-  @include linx($primary-color-1, $primary-color-1, $primary-color-1, $primary-color-1);
+
 }
 
 .user-cart{
+  @include linx($primary-color-1, $primary-color-1, $primary-color-1, $primary-color-1);
   a{
     &:before{
       @extend .cart-icon;
@@ -44,7 +46,6 @@
     }
   }
   border-right : 1px solid $border-color-1;
-  @include linx($primary-color-1, $primary-color-1, $primary-color-1, $primary-color-1);
 }
 
 .user-lang{
