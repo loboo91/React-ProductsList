@@ -10,7 +10,7 @@ export default class Header extends React.Component {
 				<div className="logo-bar">
 					<div className="header-logo">
 						<h1>
-							<img className="img-logo" src="/assets/images/logo.png" alt="Printbox"/>
+							<img src="/assets/images/logo.png" alt="Printbox"/>
 						</h1>
 					</div>
 					<div className="top-bar">
@@ -24,7 +24,7 @@ export default class Header extends React.Component {
 					</div>
 				</div>
 				<div className="nav-bar">
-					<Menu class="top-nav">
+					<Menu class="top-main-nav">
 						<MenuItem title ="PHOTOBOOKS" url ="#" />
 						<MenuItem title ="CALENDARS" url ="#" />
 						<MenuItem title ="CANVAS" url ="#" />

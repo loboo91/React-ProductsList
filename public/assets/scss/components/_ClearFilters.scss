@@ -1,0 +1,15 @@
+.clear-all-filters{
+  display: inline-block;
+  p{
+    @include font-content-small($font-color-menu-link);
+    margin-left: 3px;
+    cursor: pointer;
+  }
+  .icon-filters-reset{
+    float: left;
+    margin-right: 11px;
+    color: $border-color-2;
+    font-size: 8px;
+  }
+}
+

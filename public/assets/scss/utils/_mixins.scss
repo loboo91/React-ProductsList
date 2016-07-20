@@ -8,11 +8,11 @@
 	}
 
 	@else if $class == md {
-		@media (min-width: 1000px) { @content; }
+		@media (max-width: 1000px) { @content; }
 	}
 
 	@else if $class == lg {
-		@media (min-width: 1200px) { @content; }
+		@media (max-width: 1200px) { @content; }
 	}
 
 	@else {
@@ -38,28 +38,71 @@
 	}
 }
 
-@mixin animation($value) {
-	-webkit-animation: $value;
-	-moz-animation: $value;
-	-ms-animation: $value;
-	-o-animation: $value;
-	animation: $value;
+@mixin transition($transition...) {
+	-moz-transition:    $transition;
+	-o-transition:      $transition;
+	-webkit-transition: $transition;
+	transition:         $transition;
+}
+@mixin transition-property($property...) {
+	-moz-transition-property:    $property;
+	-o-transition-property:      $property;
+	-webkit-transition-property: $property;
+	transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+	-moz-transition-duration:    $duration;
+	-o-transition-duration:      $duration;
+	-webkit-transition-duration: $duration;
+	transition-duration:         $duration;
 }
 
-@mixin keyframes($name) {
-	@-webkit-keyframes #{$name} {
-		@content
-	}
-	@-moz-keyframes #{$name} {
-		@content
-	}
-	@-ms-keyframes #{$name} {
-		@content
-	}
-	@-o-keyframes #{$name} {
-		@content
-	}
-	@keyframes #{$name} {
-		@content
-	}
+@mixin font-menu-small($color) {
+	font-family:  $font-menu;
+	font-size:    $font-small;
+	color:        $color;
 }
+
+@mixin font-menu-medium($color) {
+	font-family:  $font-menu;
+	font-size:    $font-medium;
+	color:        $color;
+}
+
+@mixin font-menu-large($color) {
+	font-family: $font-menu;
+	font-size:   $font-large;
+	color:       $color;
+}
+
+@mixin font-content-small($color) {
+  font-family:  $font-content;
+  font-size:    $font-small;
+  color:        $color;
+}
+
+@mixin font-content-medium($color) {
+  font-family:  $font-content;
+  font-size:    $font-medium;
+  color:        $color;
+}
+
+@mixin font-content-large($color) {
+  font-family: $font-content;
+  font-size:   $font-large;
+  color:       $color;
+}
+
+@mixin radius($radius...) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($color, $box-shadow...) {
+  -moz-box-shadow: $box-shadow $color;
+  -webkit-box-shadow: $box-shadow $color;
+  box-shadow: inset $box-shadow $color;
+}
+

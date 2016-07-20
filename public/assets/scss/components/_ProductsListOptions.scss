@@ -1,0 +1,81 @@
+.products-list-options{
+  float:left;
+  text-align:right;
+  width:800px;
+  margin-top: -7px;
+  position: absolute;
+  .show{
+    font-family: $font-content;
+    font-size: $font-small;
+    color: $font-color-filter-head;
+    &:after{
+      color: $icon-arrow-color;
+      @extend .genericon-rotate-270;
+      @extend .arrow-icon;
+      @include transition-property(rotate(30deg));
+      @include transition-duration(500ms);
+      margin-left: 1px;
+    }
+  }
+  ul {
+    float: right;
+    width: 84px;
+    border: 1px solid $border-color-1;
+    z-index: 1;
+    @include radius(2px 2px 0px 0px);
+    &:hover{
+      .show{
+        &:after{
+          @extend .genericon-rotate-90;
+          @extend .arrow-icon;
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+  ul li {
+    font: $font-small $font-content;
+    display: block;
+    padding: 6px 4px 6px 8px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+  }
+  ul li ul {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    display: none;
+    opacity: 0;
+    border:0px;
+    visibility: hidden;
+    width: 86px;
+    margin-left: -1px;
+    border-top: 1px solid $border-color-1;
+    border-bottom: 1px solid $border-color-1;
+    @include radius(0px 0px 2px 2px);
+  }
+  ul li ul li {
+    background-color: white;
+    text-align: right;
+    border-right: 1px solid $border-color-1;
+    border-left: 1px solid $border-color-1;
+    padding-right: 5px;
+    span {
+      margin-right: 18px;
+      &:before { content: ""}
+    }
+  }
+  ul li ul li:hover {
+    background: $border-color-2;
+    border: 0;
+    span {
+      color: white;
+    }
+  }
+  ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+}

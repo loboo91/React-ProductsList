@@ -5,7 +5,7 @@ export default class Footer extends React.Component {
 	render() {
 		return (
 			<div className="footer-container">
-				<div className="social-block-conatiner">
+				<div className="social-block-container">
 					<div className="social-block">
 						<img className="img-logo" src="/assets/images/logo.png" alt="Printbox"/>
 
@@ -53,7 +53,10 @@ export default class Footer extends React.Component {
 						<Section label="Newsletter">
 							<SectionItem label="Get weekly emails with new"/>
 							<SectionItem label="blog posts and rabate codes!"/>
-
+							<div className="input-submit-newsletter">
+								<input type="email" name="email" placeholder="Email Address" />
+								<input type="submit" value="SUBSCRIBE"/>
+							</div>
 						</Section>
 				</div>
 				<div className="copyright">

@@ -1,4 +1,3 @@
-
 @import "utils/_normalize";
 @import "utils/_mixins";
 
@@ -11,5 +10,16 @@
 @import "components/_ProductsList";
 @import "components/_Filter";
 @import "components/_FilterItem";
-@import "components/_FilterRating";
+@import "components/_FilterLabel";
 @import "components/_FilterColors";
+@import "components/_FilterColorsItem";
+@import "components/_ClearFilters";
+@import "components/_MainList";
+@import "components/_Pagination";
+@import "components/_Product";
+@import "components/_Footer";
+@import "components/_ProductsListOptions";
+@import "components/_SearchInfo";
+@import "components/_SearchResult";
+@import "components/_ThumbnailSize";
+

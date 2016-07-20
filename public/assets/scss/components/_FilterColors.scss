@@ -1,45 +1,56 @@
-.filter-color-option{
-  display: inline-block;
-  width:40px;
-  height: 40px;
+.filter-color-container{
   float: left;
-  label{
-    position:relative;
-    overflow:hidden;
-    cursor:pointer;
+  margin-bottom: 33px;
 
-  }
-  label input[type="radio"]{
-    position: absolute;
-    left:-9001px;
-  }
-  .square{
-    width:40px;
-    height:40px;
-    display:inline-block;
-    top:1px;
-    position:relative;
-
-    span{
-      display: block;
-      position: absolute;
-      left: 5px;
-      top: 5px;
+  .colors-container{
+    width: 100%;
+    overflow: hidden;
+    margin-left: 0px;
+    @include radius(4px 4px 4px 4px);
+    .add-color{
+      width:40px;
+      height:40px;
+      cursor: pointer;
+      float: left;
+      &:before{
+        color: $icon-color-add;
+        font-size: 28px;
+        line-height: 42px;
+        font-weight: bold;
+        margin-left: 14px;
+        content: "+";
+      }
     }
+  }
 
+  .logo-container{
+    margin-top: 8px;
+    p {
+      margin-left:1px;
+      line-height: 30px;
+      @include font-content-small($font-color-filter-head);
+      span {
+        color: $font-color-filter-item;
+        margin-left:-1px;
+      }
+    }
+    button {
+      width:198px;
+      height:38px;
+      margin: 4px 0 0 1px;
+      background-color: white;
+      border: 0;
+      cursor: pointer;
+      text-align:center;
+      @include font-content-medium($font-color-filter-item);
+      @include box-shadow($border-color-1, 0 0 0 1px);
+      @include radius(1px 1px 1px 1px);
 
+      &:hover {  @include box-shadow($border-color-2, 0 0 0 1px);  }
+      &:active {  @include box-shadow($border-color-2, 0 0 0 1px);  }
+      &:focus{  outline: 0;  }
+    }
   }
 }
 
 
-.filter-color-option label input[type="radio"]:checked ~ .square{
-  box-shadow: inset 0 0 0 4px white;
-  span:before {
-    font-family: Genericons;
-    content: '\f418';
-    font-size: 28px;
-    color: white;
-    top:6px;
-    left:6px;
-  }
-}

@@ -1,0 +1,17 @@
+.search-result{
+  display: inline-block;
+  float:left;
+  width:85%;
+  font-family: $font-content;
+  font-size: $font-small;
+  height:30px;
+  margin-bottom: 1px;
+  margin-top:1px;
+  .label{
+    color: $font-color-filter-item;
+  }
+  .count{
+    color: $font-color-filter-head;
+    margin-left:6px;
+  }
+}

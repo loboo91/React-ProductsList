@@ -1,29 +1,19 @@
 .filter-container{
-  width:200px;
-  height:auto;
   float: left;
-  margin-bottom: 40px;
-
-}
-.filter-header{
-  width: 200px;
-  height: auto;
-  margin-bottom: 6px;
+  margin-bottom: 33px;
 }
 
-.filter-header-label{
-  font-family: $font-content;
-  font-size: $font-large;
-  color: $color-font-filter-header;
-}
-
-.icon-items-reset{
-  text-align: right;
-  float: right;
-  color:$primary-color-1;
-  font-size: 8px;
-  margin-right: -1px;
-  line-height: 19px;
+.show-more {
   cursor: pointer;
+  width: 200px;
+  margin-top: 3px;
+  display: inline-block;
+  p{
+    margin-left: 10px;
+    @include font-content-small($font-color-menu-link);
+    span {
+      color: $font-color-filter-head;
+      float: right;
+    }
+  }
 }
-

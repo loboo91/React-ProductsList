@@ -1,0 +1,30 @@
+.pagination{
+  margin: 0 auto;
+  width: 200px;
+  height: 40px;
+  clear: both;
+
+  @include font-content-small($font-color-filter-head);
+  div {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0 5px 0 5px;
+    p{
+      text-align: center;
+      margin-top: 3px;
+    }
+    span{
+      color: $font-color-menu-link;
+    }
+  }
+  .active{
+    background-color: $font-color-menu-link;
+    color: white;
+    @include radius(2px);
+  }
+  .spacer{
+    @include box-shadow($font-color-menu-link)
+  }
+}

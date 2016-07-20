@@ -1,0 +1,28 @@
+.filter-header{
+  width: 200px;
+  .label{
+    display: inline-block;
+    flaot:left;
+    width:90%;
+    margin-bottom: 3px;
+    @include font-content-large($font-color-filter-head);
+  }
+  .sublabel{
+    display: inline-block;
+    margin: 6px 0 3px 0;
+    @include font-content-small($font-color-filter-item);
+  }
+  .icon-items-reset{
+    display: inline-block;
+    width:10%;
+    line-height: 19px;
+    float: right;
+    color: $font-color-menu-link;
+    font-size: 8px;
+    text-align: right;
+    cursor: pointer;
+  }
+}
+
+
+

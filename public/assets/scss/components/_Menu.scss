@@ -1,134 +1,70 @@
 .top-user-nav{
-  width: auto;
-  height: auto;
+  float: right;
+  height:60px;
+  margin-right:26px;
   ul {
-    display: block;
-    float: right;
-    font-family: $font-menu;
-    font-size: $font-small;
-    margin: 18px 0 0 0;
-    padding: 0;
+    margin: 18px 0 0 7px;
     list-style: none;
     li{
-      display: block;
+      @include font-menu-medium($font-color-menu);
       float: left;
-      height: 24px;
       padding: 0 13px 0 13px;
       border-left : 1px solid $border-color-1;
+
       a {
         display: block;
         margin: 5px 0 0 0 ;
-        color: $primary-color-2;
-        &:hover{
-          color: $primary-color-1;
-        }
+        color: $font-color-menu;
+        &:hover{  color: $font-color-menu-link;  }
       }
     }
-  }
-}
-
-.user-account{
-  @include linx($primary-color-1, $primary-color-1, $primary-color-1, $primary-color-1);
-  a:before {
-    @extend .user-icon;
-  }
-
-}
-
-.user-cart{
-  @include linx($primary-color-1, $primary-color-1, $primary-color-1, $primary-color-1);
-  a{
-    &:before{
-      @extend .cart-icon;
+    .user-account{
+      @include linx($font-color-menu-link, $font-color-menu-link, $font-color-menu-link, $font-color-menu-link);
+      a:before {  @extend .user-icon;  }
     }
-    &:after{
-      @extend .arrow-icon;
+    .user-cart{
+      @include linx($font-color-menu-link, $font-color-menu-link, $font-color-menu-link, $font-color-menu-link);
+      a{
+        &:before{  @extend .cart-icon;  }
+        &:after{  @extend .arrow-icon;  }
+      }
+      border-right : 1px solid $border-color-1;
+    }
+    .user-lang{
+      a:after{  @extend .arrow-icon;  }
+    }
+    .user-search{
+      a:after{  @extend .search-icon;  }
     }
   }
-  border-right : 1px solid $border-color-1;
 }
 
-.user-lang{
-  a:after{
-    @extend .arrow-icon;
-  }
-}
-
-.user-search{
-  a:after{
-    @extend .search-icon;
-  }
-}
-
-.top-nav{
-  width: 100%;
+.top-main-nav{
+  width: $width-size-lg;
   height: 40px;
   margin: 0 auto;
   text-align: center;
-
-  @include respond-to('xs'){
-    width: 100%;
-  }
-  @include respond-to('sm'){
-    width: 720px;
-  }
-  @include respond-to('md'){
-    width: 940px;
-  }
-  @include respond-to('lg'){
-    width: 1170px;
-  }
-
   ul {
     display: inline-block;
-    width: auto;
-    height: 40px;
-    font-family: $font-menu;
-    font-size:$font-medium;
-
-    @include respond-to('xs'){
-      width: 100%;
-    }
-
     li {
+      @include font-menu-medium($font-color-menu);
       float: left;
       padding: 0 21px 0 21px;
-      text-align: left;
       text-transform: uppercase;
       list-style: none;
-
       a {
-        padding-top: 10px;
+        padding: 10px 0 10px 0;
         display: block;
-        height: calc(40px - 10px);
-        transition-property: color;
-        transition-duration: 500ms;
+        height: calc(40px - 20px);
+        @include transition-property(color);
+        @include transition-duration(500ms);
       }
-
-      @include respond-to('xs'){
-        float: none;
-        text-align: center;
-        border-top: 1px solid $border-color-1;
-        padding: 10px;
-      }
-      @include respond-to('sm'){
-        padding: 0 11px 0 11px;
-      }
-      @include respond-to('md'){
-        padding: 0 11px 0 11px;
-      }
-      @include respond-to('lg'){
-        padding: 0 21px 0 21px;
-      }
-      @include linx($primary-color-2, $primary-color-2, $primary-color-1, $primary-color-1);
+      @include linx($font-color-menu, $font-color-menu, $font-color-menu-link, $font-color-menu-link);
     }
     .active{
       font-weight: bold;
-      @include linx($primary-color-1, $primary-color-1, $primary-color-1, $primary-color-1);
+      @include linx($font-color-menu-link, $font-color-menu-link, $font-color-menu-link, $font-color-menu-link);
     }
-  }
-  @include respond-to('xs'){
-    height: 100%;
   }
 }
 

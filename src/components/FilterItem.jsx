@@ -28,7 +28,7 @@ export default class FilterItem extends React.Component {
 		if (this.props.star){
 			var stars = "";
 			var style = "gold-star";
-			for (var j=0; j<4; j++) {
+			for (var j=0; j<5; j++) {
 				if (this.props.star <= j) style = "grey-star";
 				stars += "<span class='genericon genericon-star "+style+"'></span>";
 			}
@@ -41,7 +41,7 @@ export default class FilterItem extends React.Component {
 			<div className="filter-option" onClick={this.handleSelectedChange.bind(this)}>
 
 				<If test={this.props.star}>
-					<div className="filter-rating-item">
+					<div className="rating-item">
 						<label htmlFor={this.props.star}>
 							<input
 								name={this.props.label}
@@ -52,27 +52,28 @@ export default class FilterItem extends React.Component {
 								onChange={this.handleSelectedChange.bind(this)}
 							/>
 							<span className="circ"><span className="dot"/></span>
-							<span dangerouslySetInnerHTML={toReturn} />
+							<span className="rating-label" dangerouslySetInnerHTML={toReturn} />
 						</label>
 					</div>
 				</If>
 
 				<If test={!this.props.star}>
-					<div className={"filter-option-checkbox " + this.props.itemClassName}>
+					<div className={"option-checkbox " + this.props.itemClassName}>
 						<input
 							type="checkbox"
 							checked={this.state.selected}
 							onChange={this.handleSelectedChange.bind(this)}
 						/>
-						<label className="filter-checkbox-label">
+						<label className="checkbox-label">
 							{this.props.label}
 						</label>
 					</div>
 				</If>
 
-				<div className="filter-option-count">
+				<div className="option-count">
 					{this.props.count}
 				</div>
+
 			</div>
 		);
 	}

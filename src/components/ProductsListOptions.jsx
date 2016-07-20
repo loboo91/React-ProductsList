@@ -6,7 +6,7 @@ export default class ProductsListOptions extends React.Component {
 			<div className="products-list-options">
 				<ul>
 					<li>
-						Show: <span>20</span>
+						Show: <span className="show">20</span>
 						<ul>
 							<li><span>40</span></li>
 							<li><span>80</span></li>

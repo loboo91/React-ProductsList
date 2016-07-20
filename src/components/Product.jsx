@@ -17,14 +17,14 @@ export default class Product extends React.Component {
 
 		return (
 			<div className='product-container fade-in'>
-				<div className='product-image-container'>
+				<div className='image'>
 					<img src={this.props.item.srcImg} alt={"pic "+ this.props.item.srcImg}/>
 				</div>
-				<div className='product-description-container'>
-					<p className='product-rating' dangerouslySetInnerHTML={toReturn}/>
-					<p className={"product-"+this.props.item.fav}><span className='genericon genericon-heart'/></p>
-					<p className='product-name'>{this.props.item.name}</p>
-					<p className='product-size'>{this.props.item.size}</p>
+				<div className='description'>
+					<p className='rating' dangerouslySetInnerHTML={toReturn}/>
+					<p className={this.props.item.fav}><span className='genericon genericon-heart'/></p>
+					<p className='name'>{this.props.item.name}</p>
+					<p className='size'>{this.props.item.size}</p>
 				</div>
 			</div>
 		);
